@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Billing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Book Billing System</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Price (₹)</th>
+                <th>CheckBox</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>B101</td>
+                <td>Java Programming</td>
+                <td class="price">550</td>
+                <td>
+                    <input type="checkbox" onchange="toggleQuantity(this)">
+                </td>
+                <td>
+                    <input type="number" min="1" disabled class="qty">
+                </td>
+            </tr>
+
+            <tr>
+                <td>B102</td>
+                <td>Python Basics</td>
+                <td class="price">450</td>
+                <td>
+                    <input type="checkbox" onchange="toggleQuantity(this)">
+                </td>
+                <td>
+                    <input type="number" min="1" disabled class="qty">
+                </td>
+            </tr>
+
+            <tr>
+                <td>B103</td>
+                <td>Data Structures</td>
+                <td class="price">600</td>
+                <td>
+                    <input type="checkbox" onchange="toggleQuantity(this)">
+                </td>
+                <td>
+                    <input type="number" min="1" disabled class="qty">
+                </td>
+            </tr>
+
+            <tr>
+                <td>B104</td>
+                <td>Web Development</td>
+                <td class="price">700</td>
+                <td>
+                    <input type="checkbox" onchange="toggleQuantity(this)">
+                </td>
+                <td>
+                    <input type="number" min="1" disabled class="qty">
+                </td>
+            </tr>
+
+            <tr>
+                <td>B105</td>
+                <td>Database Systems</td>
+                <td class="price">500</td>
+                <td>
+                    <input type="checkbox" onchange="toggleQuantity(this)">
+                </td>
+                <td>
+                    <input type="number" min="1" disabled class="qty">
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="buttons">
+        <button onclick="payBill()">Pay the Bill</button>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <h3 id="result"></h3>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
